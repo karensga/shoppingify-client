@@ -1,5 +1,5 @@
-const Tooltip = ({ name }) => {
-    return <span className="tooltiptext tooltip-right">{name}</span>
+const Tooltip = ({ children }) => {
+    return <span className="tooltiptext tooltip-right">{children}</span>
 }
 
 export default Tooltip
