@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import MenuSide from '../components/MenuSide'
-import Page from './page'
-import ShoppingList from '../components/ShoppingList'
-import FormProduct from '../components/FormProduct'
+import MenuSide from '../../components/MenuSide'
+import ShoppingList from '../../components/ShoppingList'
+import FormProduct from '../../components/FormProduct'
+
+import { Container, Page } from './style'
 
 const main = ({ children }) => {
 
@@ -12,17 +13,17 @@ const main = ({ children }) => {
         setOpenFormProduct(!openFormProduct)
     }
     return (
-        <div className="main">
+        <Container>
             <MenuSide />
             <Page>
                 {children}
             </Page> 
-            {
+            {/* {
                 openFormProduct ? <FormProduct onActionCancel={handleChangeStateOpenFormProduct} />
                 : <ShoppingList handleOpenForm={handleChangeStateOpenFormProduct} />
-            }
+            } */}
             
-        </div>
+        </Container>
     )
 }
 

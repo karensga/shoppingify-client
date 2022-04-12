@@ -1,37 +1,39 @@
-import Logo from '../assets/logo.svg'
+import Logo from '../../assets/logo.svg'
 import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted'
 import AssessmentOutlinedIcon from '@material-ui/icons/AssessmentOutlined'
 import ReplayOutlinedIcon from '@material-ui/icons/ReplayOutlined'
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined'
-import Tooltip from './Tooltip'
-import { useCar } from '../hooks/car'
+import Tooltip from '../Tooltip'
+import { useCar } from '../../hooks/car'
+
+import {Nav, Img, Ul, Li, Button, ItemsSignal} from './style'
 
 const MenuSide = () => {
 
     const { carItem } = useCar()
 
     return (
-        <nav className="main__menuSide">
-            <img src={Logo} alt="" className="menuSide__logo" />
-            <ul>
-                <li className="tooltip active">
+        <Nav >
+            <Img src={Logo} alt=""/>
+            <Ul>
+                <Li className="tooltip active">
                     <FormatListBulletedIcon className="main__menuSide__icons" />
                     <Tooltip>items</Tooltip>
-                </li>
-                <li className="tooltip">
+                </Li>
+                <Li className="tooltip">
                     <ReplayOutlinedIcon className="main__menuSide__icons" />
                     <span className="tooltiptext tooltip-right">history</span>
-                </li>
-                <li className="tooltip">
+                </Li>
+                <Li className="tooltip">
                     <AssessmentOutlinedIcon className="main__menuSide__icons" />
                     <span className="tooltiptext tooltip-right">statistics</span>
-                </li>
-            </ul>
-            <button className="btn-rounded">
+                </Li>
+            </Ul>
+            <Button>
                 <ShoppingCartOutlinedIcon className="color" />
-                <span className="btn__ping">{carItem.length}</span>
-            </button>
-        </nav>
+                <ItemsSignal>{carItem.length}</ItemsSignal>
+            </Button>
+        </Nav>
     )
 }
 
