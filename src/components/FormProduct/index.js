@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
-import InputCustom from '../components/InputCustom'
-import SelectCustom from '../components/SelectCustom'
-import getCategories from '../service/getCategories'
-import createProduct from '../service/createProduct'
-import Loading from '../components/Loading'
+import InputCustom from '../InputCustom'
+import SelectCustom from '../SelectCustom'
+import getCategories from '../../service/getCategories'
+import createProduct from '../../service/createProduct'
+import Loading from '../Loading'
 import { useForm, Controller } from 'react-hook-form'
+
+import { Container, Title, Footer, ButtonCancel, ButtonSave } from './style'
 
 const FormProduct = ({ onActionCancel }) => {
 
@@ -25,8 +27,8 @@ const FormProduct = ({ onActionCancel }) => {
     }
 
     return (
-        <form className="formProduct" onSubmit={handleSubmit(handleCreateProduct)}>
-            <h1>Add a new item</h1>
+        <Container onSubmit={handleSubmit(handleCreateProduct)}>
+            <Title>Add a new item</Title>
             <Controller
                 render={({ field }) => <InputCustom {...field} title={'Name'} placeholderText={'Enter a name'} />}
                 name="name"
@@ -54,13 +56,13 @@ const FormProduct = ({ onActionCancel }) => {
                 control={control}
                 rules={{ required: true }}
             />
-            <footer className="formProduct__footer">
-                <button className="formProduct__footer__button-cancel" onClick={() => onActionCancel()}>cancel</button>
-                <button type="submit" disabled={loadingAddProduct} className="formProduct__footer__button-save">
+            <Footer>
+                <ButtonCancel onClick={() => onActionCancel()}>cancel</ButtonCancel>
+                <ButtonSave type="submit" disabled={loadingAddProduct}>
                     {loadingAddProduct ? <Loading text={'saving'} /> : 'Save'}
-                </button>
-            </footer>
-        </form>
+                </ButtonSave>
+            </Footer>
+        </Container>
     )
 }
 
