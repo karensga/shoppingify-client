@@ -187,27 +187,6 @@ ul>li {
     margin-bottom: 1.8rem;
 }
 
-.shoppingList {
-    display: none;
-    width: 30%;
-    height: 100%;
-    background-color: var(--background-shoppingList);
-    display: flex;
-    flex-direction: column;
-}
-
-.shoppingList__addList {
-    display: flex;
-    background-color: var(--background-shoppingList-addList);
-    color: white;
-    width: 30.8rem;
-    height: 12.9rem;
-    border-radius: 2.4rem;
-    margin: 4.3rem auto;
-    font-size: 1.6rem;
-    font-weight: bold;
-}
-
 .shoppingList__group {
     width: 60%;
     height: 100%;
@@ -216,12 +195,6 @@ ul>li {
     justify-content: center;
     margin: auto 0;
     margin-left: 0;
-}
-
-.shoppingList__addList>img {
-    margin: 0 auto;
-    margin-top: -1.6rem;
-    margin-bottom: 1.6rem;
 }
 
 .shoppingList__group>p {

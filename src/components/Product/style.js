@@ -12,7 +12,9 @@ export const Container = styled.div`
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.05);
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.05);
-    font-size: 1.7rem;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    margin-bottom: 1rem; 
 
 `
 
