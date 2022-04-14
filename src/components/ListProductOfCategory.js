@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import getProductsByCategory from '../service/getProductsByCategory'
-import Product from '../components/Product'
+import Product from './Product'
 
 const ListProductOfCategory = ({ id }) => {
 

@@ -7,8 +7,10 @@ export const Container = styled.div`
 `
 
 export const Page = styled.div`
-    width: 70%;
-    padding: 0 8rem;
+    width: 80%;
+    padding: 0 1.5rem;
     padding-top: 3.7rem;
     overflow: auto;
+    
+    /* padding: 0 8rem; */
 `
