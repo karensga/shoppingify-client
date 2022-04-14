@@ -8,7 +8,7 @@ import { useCar } from '../../hooks/car'
 
 import {Nav, Img, Ul, Li, Button, ItemsSignal} from './style'
 
-const MenuSide = () => {
+const MenuSide = ({toggle}) => {
 
     const { carItem } = useCar()
 
@@ -29,7 +29,7 @@ const MenuSide = () => {
                     <span className="tooltiptext tooltip-right">statistics</span>
                 </Li>
             </Ul>
-            <Button>
+            <Button onClick={toggle}>
                 <ShoppingCartOutlinedIcon className="color" />
                 <ItemsSignal>{carItem.length}</ItemsSignal>
             </Button>

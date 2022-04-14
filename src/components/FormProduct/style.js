@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.form`
     width: 100%;
+    max-width: 39.0rem;
     padding: 2.4rem 1rem;
 
     @media(min-width:640px){

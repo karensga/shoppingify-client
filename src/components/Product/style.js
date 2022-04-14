@@ -16,6 +16,10 @@ export const Container = styled.div`
     line-height: 1.8rem;
     margin-bottom: 1rem; 
 
+    @media(min-width:640px) {
+        max-width: 8.05rem;
+    }
+
 `
 
 export const Button = styled.button`

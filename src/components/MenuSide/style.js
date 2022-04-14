@@ -3,11 +3,13 @@ import styled from 'styled-components'
 export const Nav = styled.nav`
     padding: 3.4rem 0;
     width: 20%;
+    max-width: 9.4rem;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-items: center;
     justify-content: space-between;
+
 `
 
 export const Img = styled.img`
